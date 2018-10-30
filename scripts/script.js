@@ -8,8 +8,10 @@
 $(document).ready(() => {
 //storage array
 const array  = [
-    {Bug: "Clear form not working", Description: "That is not my job to describe to you how and why the bug occured"},
-    {Bug: "Clear form still not working", Description: "Seriously, that is not my job to describe the bug for you. You should be fired"}
+    {Bug: "Clear form not working", 
+     Description: "That is not my job to describe to you how and why the bug occured"},
+    {Bug: "Clear form still not working", 
+     Description: "Seriously, that is not my job to describe the bug for you. You should be fired"}
 
 ];
 
@@ -20,6 +22,8 @@ document.querySelector("#add-btn").addEventListener("click", () => {
       Bug: inputs[0].value, 
       Description: inputs[1].value 
 });
+
+$(".bug").remove();  // Top stop extras from pilling on
 
 console.log(array); //To log the gathering of input values
 
@@ -43,7 +47,16 @@ $(document).on("click", ".resolved-btn", (event) => {
     $(".bug").remove();
     array.shift();
     console.log(array);  //To log the rencetly trimmed array
-    
+    if (array.length != 0) {
+        $(".popup").append(`
+        <section class="bug">
+        Bug: ${array[0].Bug}
+        Description: ${array[0].Description}
+            
+        <button class="resolved-btn" type="button">Resolved</button>
+        </section>
+    `);
+    }
 }) 
 
 
