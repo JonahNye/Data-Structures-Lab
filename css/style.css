@@ -1,0 +1,53 @@
+
+h1 , h4 {
+    text-align: center;
+    color: steelblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-input-form {
+    margin-top: 45px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border: 3px solid slategray;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    width: 65%;
+    height: 30%;
+}
+
+input {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 20pt;
+}
+
+
+.bug {
+    margin-top: 10%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    border: 3px solid slategray;  /*A nice slate gray for Adam*/
+    width: 30%;
+    height: 30%;
+}
+
+button {
+    margin-bottom: 29px;
+}
